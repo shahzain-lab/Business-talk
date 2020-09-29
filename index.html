@@ -37,8 +37,85 @@
                 <i class="fas fa-chevron-up" id="bars"></i>
             </div>
             <audio src="music/Sleep Away.mp3"></audio>
-        </div>
+        </div> 
     </div>
-</body>
 
+    <!-- script/// -->
+    <script>
+        const play=document.getElementById('play');
+        const music=document.querySelector('audio');
+        const artist=document.getElementById('artist');
+        const title=document.getElementById('title');
+        const heart=document.getElementById('heart');
+        const next=document.getElementById('forward');
+        const back=document.getElementById('backward');
+
+
+
+        // next and prev function
+        
+        let songList =[{
+            name : "Kalimba",
+            title : "Kalimba",
+            artist : "the loyalist (artist)"
+        },{
+            name : "Maid with the Flaxen Hair",
+            title : "The maid",
+            artist : "Aurora (artist)"
+        },
+    {
+        name : "Sleep Away",
+        title : "Sleep Away",
+        artist : "Lexie Liu (artist)"
+    }];
+
+    const songBox =(songList)=>{
+        title.textContent = songList.title;
+        artist.textContent = songList.artist;
+        music.src ="music/"+songList.name +".mp3";
+    }
+     
+    songIndex = 0;
+    const nextSong =()=>{
+        songIndex = (songIndex + 1)% songList.length;
+        songBox(songList[songIndex]);
+        playMusic();
+    }
+    const prevSong =()=>{
+        songIndex = (songIndex - 1 + songList.length) % songList.length;
+        songBox(songList[songIndex]);
+        playMusic();
+    }
+    next.addEventListener('click',nextSong);
+    back.addEventListener('click',prevSong);
+        // startup
+        let isPlaying =false;
+
+let playMusic= () => {
+    isPlaying = true;
+    music.play();
+    play.classList.replace('fa-play',"fa-pause");
+};
+// pause
+const pauseMusic =() => {
+    isPlaying = false;
+    music.pause();
+    play.classList.replace("fa-pause","fa-play");
+};
+play.addEventListener('click',() => {
+    // if(isPlaying) {
+    //     pauseMusic();
+    // }else{
+    //     playMusic();
+    // }     -or-
+    isPlaying ?  pauseMusic() : playMusic();
+});
+
+//    heart
+heart.addEventListener('click',()=>{
+    heart.style.color="#ff6060";
+    heart.style.fontSize="1.7rem"
+})
+    </script>
+</body>
 </html>
