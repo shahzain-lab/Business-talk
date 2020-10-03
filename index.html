@@ -11,37 +11,8 @@
     <link rel="icon" type="image/png" href="https://images.macrumors.com/t/tCPS-yWwAQ_siFOl14cUWLHEw1c=/400x0/filters:quality(90)/article-new/2018/05/apple-music-note-800x420.jpg?lossy">
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
-
-</head>
-<body>
-    <div class="main-div">
-        <div class="center-div">
-            
-            <div class="line">
-            <div class="img-div">
-                <img src="https://img.etimg.com/thumb/msid-71477539,width-650,imgsize-622277,,resizemode-4,quality-100/music_thinkstockphotos.jpg" alt="">
-            </div>
-        </div>
-            <div class="name">
-                <h1 id="title">Kalimba</h1>
-                <p id="artist">Aurora (artist)</p>
-            </div>
-            <div class="fonts">
-                <i class="fas fa-backward" title="backward" id="backward"></i>
-                <i class="fas fa-play" title="play" id="play"></i>
-                <i class="fas fa-forward" title="forward" id="forward"></i>
-            </div>
-            <div class="style">
-                <i class="fas fa-expand-arrows-alt" id="arrow"></i>
-                <i class="fas fa-heart" title="heart" id="heart"></i>
-                <i class="fas fa-chevron-up" id="bars"></i>
-            </div>
-            <audio src="music/Sleep Away.mp3"></audio>
-        </div> 
-    </div>
-
-    <!-- script/// -->
-    <script>
+<!--     <scrip> -->
+     <script>
         const play=document.getElementById('play');
         const music=document.querySelector('audio');
         const artist=document.getElementById('artist');
@@ -117,5 +88,36 @@ heart.addEventListener('click',()=>{
     heart.style.fontSize="1.7rem"
 })
     </script>
+
+</head>
+<body>
+    <div class="main-div">
+        <div class="center-div">
+            
+            <div class="line">
+            <div class="img-div">
+                <img src="https://img.etimg.com/thumb/msid-71477539,width-650,imgsize-622277,,resizemode-4,quality-100/music_thinkstockphotos.jpg" alt="">
+            </div>
+        </div>
+            <div class="name">
+                <h1 id="title">Kalimba</h1>
+                <p id="artist">Aurora (artist)</p>
+            </div>
+            <div class="fonts">
+                <i class="fas fa-backward" title="backward" id="backward"></i>
+                <i class="fas fa-play" title="play" id="play"></i>
+                <i class="fas fa-forward" title="forward" id="forward"></i>
+            </div>
+            <div class="style">
+                <i class="fas fa-expand-arrows-alt" id="arrow"></i>
+                <i class="fas fa-heart" title="heart" id="heart"></i>
+                <i class="fas fa-chevron-up" id="bars"></i>
+            </div>
+            <audio src="music/Sleep Away.mp3"></audio>
+        </div> 
+    </div>
+
+    <!-- script/// -->
+   
 </body>
 </html>
